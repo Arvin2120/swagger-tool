@@ -1,0 +1,123 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "测试swagger 文档",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/users": {
+      "get": {
+        "tags": [
+          "AXFORM"
+        ],
+        "summary": "我是接口/api/users",
+        "description": "详细描述",
+        "parameters": [
+          {
+            "name": "id",
+            "description": "User ID",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "description": "User 名称",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Some description...",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "John Doe"
+                },
+                "age": {
+                  "type": "number",
+                  "example": 29
+                },
+                "about": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hello": {
+      "get": {
+        "tags": [
+          "AXFORM",
+          "axxx"
+        ],
+        "summary": "hello world !!!",
+        "description": "详细描述 ||ヽ(*￣▽￣*)ノミ|Ю",
+        "parameters": [
+          {
+            "name": "id",
+            "description": "User ID",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "description": "User 名称",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "返回内容的描述",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "张三"
+                },
+                "age": {
+                  "type": "string",
+                  "example": "18"
+                },
+                "about": {
+                  "type": "string",
+                  "example": "关于张三"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
